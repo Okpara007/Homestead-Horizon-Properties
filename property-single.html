@@ -34,6 +34,26 @@
     </title>
   </head>
   <body>
+
+    <style>
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px; /* This will create space between the images */
+        margin-top: 10px; /* This adds space between the gallery and the image above it */
+      }
+      
+      .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 10px; /* This adds space inside each image container, around the image */
+        background: #fff; /* This sets a white background in case the image is transparent */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for some depth */
+      }
+      
+      
+    </style>
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
@@ -131,6 +151,7 @@
               Indulge in the pinnacle of luxury with our exquisite property, now on the market for $135,000.000. This architectural marvel in Michigan, USA, redefines modern living with its blend of elegant design and state-of-the-art amenities. Jacob Martin, our distinguished real estate agent, awaits the privilege of navigating you through the unique features that make this property a once-in-a-lifetime investment.
             </p>
 
+
             <div class="d-block agent-box p-5">
               <div class="img mb-4">
                 <img
@@ -159,12 +180,29 @@
                     <a href="#"><span class="icon-linkedin"></span></a>
                   </li>
                 </ul> -->
+                
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="img-property-slide-wrap">
+      <div class="img-property-slide">
+        <!-- existing large images here -->
+      </div>
+      <!-- Gallery images section -->
+      <div class="gallery">
+        <img src="images/interior6.jpg" alt="Gallery Image 1" class="img-fluid" />
+        <img src="images/interior4.jpg" alt="Gallery Image 2" class="img-fluid" />
+        <img src="images/interior5.jpg" alt="Gallery Image 3" class="img-fluid" />
+        <img src="images/interior1.jpg" alt="Gallery Image 4" class="img-fluid" />
+        <img src="images/interior2.jpg" alt="Gallery Image 5" class="img-fluid" />
+        <img src="images/interior3.jpg" alt="Gallery Image 6" class="img-fluid" />
+      </div>
+    </div>
+    
 
     <div class="site-footer">
       <div class="container">
