@@ -36,23 +36,36 @@
   <body>
 
     <style>
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px; /* This will create space between the images */
-        margin-top: 10px; /* This adds space between the gallery and the image above it */
-      }
-      
-      .gallery img {
-        width: 100%;
-        height: auto;
-        display: block;
-        padding: 10px; /* This adds space inside each image container, around the image */
-        background: #fff; /* This sets a white background in case the image is transparent */
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for some depth */
-      }
-      
-      
+      /* Base styles for the gallery, assuming these are already in place for larger screens */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Media query for devices with a width of up to 768px, typical for phones */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* This makes it a single column layout */
+    gap: 10px; /* You can reduce the gap because space is more premium on smaller screens */
+    padding: 0; /* Remove padding from the sides */
+  }
+  
+  .gallery img {
+    padding: 0; /* Remove padding around images */
+    box-shadow: none; /* Optionally remove the shadow for a cleaner look */
+  }
+}     
     </style>
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -193,7 +206,7 @@
         <!-- existing large images here -->
       </div>
       <!-- Gallery images section -->
-      <div class="gallery">
+      <div class="gallery ">
         <img src="images/interior6.jpg" alt="Gallery Image 1" class="img-fluid" />
         <img src="images/interior4.jpg" alt="Gallery Image 2" class="img-fluid" />
         <img src="images/interior5.jpg" alt="Gallery Image 3" class="img-fluid" />
